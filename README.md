@@ -119,7 +119,7 @@ Thanks to all who made screenshots of Iris Creations!
 This is my recommeded installation for Windows
 1. Clone this repository anywhere on your PC
 2. Right-click your desktop and select `personalize`
-3. Select the cloned folder under the `Backgrounds` section
+3. Select `<location>/IrisBackgrounds/images` under the `Backgrounds` section
 4. Set the mode to `centre`, it appears to give the best results (feel free to try other modes)
 5. Set the refresh time to anything. I personally use `5 minutes`.
 6. Enjoy exactly <!-- BEGIN COUNT -->`179`<!-- END COUNT --> (and counting) screenshots every time you see your desktop!
