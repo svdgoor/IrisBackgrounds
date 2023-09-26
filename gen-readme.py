@@ -67,13 +67,14 @@ for image in images:
         creation_date = datetime.datetime.fromtimestamp(creation_time)
 
         # Rename the file to the format YYYY-MM_ID.png|jpg where _ID is omitted if it is 0
-        new_name = f"{creation_date.year}-{creation_date.month}"
-        no = 0
-        while os.path.exists(f"{IMAGES_PATH}/{new_name}.png") or os.path.exists(f"{IMAGES_PATH}/{new_name}.jpg"):
-            no += 1
-            new_name = f"{creation_date.year}-{creation_date.month}_{no}"
+        # Format month to 2 digits
+        new_name = f"{creation_date.year}-{creation_date.month:02}"
+        if os.path.exists(f"{IMAGES_PATH}/{new_name}.png") or os.path.exists(f"{IMAGES_PATH}/{new_name}.jpg"):
+            new_name = new_name + "_0"
+            while os.path.exists(f"{IMAGES_PATH}/{new_name}.png") or os.path.exists(f"{IMAGES_PATH}/{new_name}.jpg"):
+                new_name = new_name[:-1] + str(int(new_name[-1]) + 1)
         print(f"Renaming {image} to {new_name}{os.path.splitext(image)[1]}")
-        os.rename(f"{IMAGES_PATH}/{image}", f"{IMAGES_PATH}/{new_name}_{no}{os.path.splitext(image)[1]}")
+        os.rename(f"{IMAGES_PATH}/{image}", f"{IMAGES_PATH}/{new_name}{os.path.splitext(image)[1]}")
         split = new_name.split("-")
     year = split[0]
     if year not in images_by_year:
