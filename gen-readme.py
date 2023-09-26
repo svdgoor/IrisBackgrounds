@@ -59,7 +59,23 @@ images: 'list[str]' = [image for image in os.listdir(IMAGES_PATH) if image.endsw
 # Group the images by year
 images_by_year: 'dict' = {}
 for image in images:
-    year = image.split("-")[0]
+    split = image.split("-")
+    if len(split) < 2:
+        # Get the creation year and month from the file metadata
+        import datetime
+        creation_time = os.path.getctime(f"{IMAGES_PATH}/{image}")
+        creation_date = datetime.datetime.fromtimestamp(creation_time)
+
+        # Rename the file to the format YYYY-MM_ID.png|jpg where _ID is omitted if it is 0
+        new_name = f"{creation_date.year}-{creation_date.month}"
+        no = 0
+        while os.path.exists(f"{IMAGES_PATH}/{new_name}.png") or os.path.exists(f"{IMAGES_PATH}/{new_name}.jpg"):
+            no += 1
+            new_name = f"{creation_date.year}-{creation_date.month}_{no}"
+        print(f"Renaming {image} to {new_name}{os.path.splitext(image)[1]}")
+        os.rename(f"{IMAGES_PATH}/{image}", f"{IMAGES_PATH}/{new_name}_{no}{os.path.splitext(image)[1]}")
+        split = new_name.split("-")
+    year = split[0]
     if year not in images_by_year:
         images_by_year[year] = []
     images_by_year[year].append(image)
