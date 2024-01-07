@@ -54,7 +54,7 @@ trigger_enter_index = readme_lines.index(TRIGGER_IMAGES_ENTER)
 trigger_exit_index = readme_lines.index(TRIGGER_IMAGES_EXIT)
 
 # Filter out non-images from the repository
-images: 'list[str]' = [image for image in os.listdir(IMAGES_PATH) if image.endswith(".png") or image.endswith(".jpg")]
+images: 'list[str]' = [image for image in os.listdir(IMAGES_PATH) if image.endswith(".png") or image.endswith(".jpg") and not image.startswith("_ignore")]
 
 # Group the images by year
 images_by_year: 'dict' = {}
