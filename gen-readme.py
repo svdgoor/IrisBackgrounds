@@ -88,7 +88,7 @@ for line in readme_lines[:trigger_enter_index + 1]:
     out += line
 
 # Write the images with markdown in a table format of 3 columns
-for year in images_by_year:
+for year in images_by_year.__reversed__():
 
     # Get images for the year
     ims = images_by_year[year]
