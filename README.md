@@ -98,6 +98,19 @@ Number of images: 44
 | ![2023-12_5.png](images/2023-12_5.png) | ![2023-12_6.png](images/2023-12_6.png) | 
 </details>
 
+<details>
+<summary>2024</summary>
+
+Number of images: 15
+
+| ![2024-01.png](images/2024-01.png) | ![2024-01_0.png](images/2024-01_0.png) | ![2024-01_1.png](images/2024-01_1.png) | 
+|---|---|---|
+| ![2024-01_10.png](images/2024-01_10.png) | ![2024-01_11.png](images/2024-01_11.png) | ![2024-01_12.png](images/2024-01_12.png) | 
+| ![2024-01_13.png](images/2024-01_13.png) | ![2024-01_2.png](images/2024-01_2.png) | ![2024-01_3.png](images/2024-01_3.png) | 
+| ![2024-01_4.png](images/2024-01_4.png) | ![2024-01_5.png](images/2024-01_5.png) | ![2024-01_6.png](images/2024-01_6.png) | 
+| ![2024-01_7.png](images/2024-01_7.png) | ![2024-01_8.png](images/2024-01_8.png) | ![2024-01_9.png](images/2024-01_9.png) | 
+</details>
+
 <!-- END IMAGES -->
 
 ## Credits
@@ -128,7 +141,7 @@ This is my recommeded installation for Windows
 3. Select `<location>/IrisBackgrounds/images` under the `Backgrounds` section
 4. Set the mode to `centre`, it appears to give the best results (feel free to try other modes)
 5. Set the refresh time to anything. I personally use `5 minutes`.
-6. Enjoy exactly <!-- BEGIN COUNT -->`195`<!-- END COUNT --> (and counting) screenshots every time you see your desktop!
+6. Enjoy exactly <!-- BEGIN COUNT -->`210`<!-- END COUNT --> (and counting) screenshots every time you see your desktop!
 
 ## Uploading
 To contribute screenshots to this collection, each image must be
