@@ -93,34 +93,41 @@ for year in images_by_year.__reversed__():
     # Get images for the year
     ims = images_by_year[year]
 
-    # Details block for dropdown
-    out += "<details>\n"
-    out += f"<summary>{year}</summary>\n\n"
-    
-    # Number of images
-    out += f"Number of images: {len(ims)}\n\n"
+    # Generate the file name
+    file_name = f"images_{year}.md"
 
-    # Write the table header
-    out += "| "
-    for j in range(TABLE_COLUMNS):
-        if j < len(ims):
-            out += f"![{ims[j]}]({IMAGES_PATH}/{ims[j]}) | "
-    out += "\n"
+    # Open the file in write mode
+    with open(file_name, "w") as f:
+        # Write the title and number of images
+        f.write(f"# {year}\n\n")
 
-    # Write the table divider (required to make the table work)
-    out += "|---|---|---|\n"
-
-    # Write the table rows
-    # The TABLE_COLUMNS as the first argument of range is to skip the first row
-    for i in range(TABLE_COLUMNS, len(ims), TABLE_COLUMNS):
-        out += "| "
+        # Write the table header
+        f.write("| ")
         for j in range(TABLE_COLUMNS):
-            if i + j < len(ims):
-                out += f"![{ims[i + j]}]({IMAGES_PATH}/{ims[i + j]}) | "
-        out += "\n"
+            if j < len(images_by_year[year]):
+                f.write(f"![{images_by_year[year][j]}]({IMAGES_PATH}/{images_by_year[year][j]}) | ")
+        f.write("\n")
 
-    # Close the details block
-    out += "</details>\n\n"
+        # Write the table divider
+        f.write("|---|---|---|\n")
+
+        # Write the table rows
+        for i in range(TABLE_COLUMNS, len(images_by_year[year]), TABLE_COLUMNS):
+            f.write("| ")
+            for j in range(TABLE_COLUMNS):
+                if i + j < len(images_by_year[year]):
+                    f.write(f"![{images_by_year[year][i + j]}]({IMAGES_PATH}/{images_by_year[year][i + j]}) | ")
+            f.write("\n")
+
+    # Add a link to the new markdown file in the main document
+    # Get the first image for the year
+    first_image = images_by_year[year][0]
+
+    # Write the clickable image
+    out += f"[![{first_image}]({IMAGES_PATH}/{first_image})](./{file_name})"
+
+    # Write the centered subtext with the year
+    out += f"<p align='center'><a href='./{file_name}'>{year} ({len(images_by_year[year])})</a></p>"
 
 # Write the lines after and including the exit trigger
 for line in readme_lines[trigger_exit_index:count_index]:
