@@ -15,57 +15,52 @@ Number of images: 15
 <details>
 <summary>2023</summary>
 
-Number of images: 44
+Number of images: 39
 
-| ![2023-01.png](images/2023-01.png) | ![2023-01_1.png](images/2023-01_1.png) | ![2023-01_2.png](images/2023-01_2.png) | 
+| ![2023-01.png](images/2023-01.png) | ![2023-01_2.png](images/2023-01_2.png) | ![2023-01_3.png](images/2023-01_3.png) | 
 |---|---|---|
-| ![2023-01_3.png](images/2023-01_3.png) | ![2023-02.jpg](images/2023-02.jpg) | ![2023-02.png](images/2023-02.png) | 
-| ![2023-02_1.png](images/2023-02_1.png) | ![2023-02_2.png](images/2023-02_2.png) | ![2023-02_3.png](images/2023-02_3.png) | 
-| ![2023-02_4.png](images/2023-02_4.png) | ![2023-02_5.png](images/2023-02_5.png) | ![2023-03.png](images/2023-03.png) | 
-| ![2023-05.png](images/2023-05.png) | ![2023-05_1.png](images/2023-05_1.png) | ![2023-05_10.png](images/2023-05_10.png) | 
-| ![2023-05_11.png](images/2023-05_11.png) | ![2023-05_12.png](images/2023-05_12.png) | ![2023-05_13.png](images/2023-05_13.png) | 
-| ![2023-05_14.png](images/2023-05_14.png) | ![2023-05_15.png](images/2023-05_15.png) | ![2023-05_3.png](images/2023-05_3.png) | 
-| ![2023-05_4.png](images/2023-05_4.png) | ![2023-05_5.png](images/2023-05_5.png) | ![2023-05_6.png](images/2023-05_6.png) | 
-| ![2023-05_7.png](images/2023-05_7.png) | ![2023-05_8.png](images/2023-05_8.png) | ![2023-05_9.png](images/2023-05_9.png) | 
-| ![2023-09.png](images/2023-09.png) | ![2023-09_1.png](images/2023-09_1.png) | ![2023-09_2.png](images/2023-09_2.png) | 
-| ![2023-09_3.png](images/2023-09_3.png) | ![2023-09_4.png](images/2023-09_4.png) | ![2023-09_5.png](images/2023-09_5.png) | 
-| ![2023-09_6.png](images/2023-09_6.png) | ![2023-09_7.png](images/2023-09_7.png) | ![2023-10.png](images/2023-10.png) | 
-| ![2023-12.png](images/2023-12.png) | ![2023-12_0.png](images/2023-12_0.png) | ![2023-12_1.png](images/2023-12_1.png) | 
-| ![2023-12_2.png](images/2023-12_2.png) | ![2023-12_3.png](images/2023-12_3.png) | ![2023-12_4.png](images/2023-12_4.png) | 
-| ![2023-12_5.png](images/2023-12_5.png) | ![2023-12_6.png](images/2023-12_6.png) | 
+| ![2023-02.jpg](images/2023-02.jpg) | ![2023-02.png](images/2023-02.png) | ![2023-02_2.png](images/2023-02_2.png) | 
+| ![2023-02_3.png](images/2023-02_3.png) | ![2023-02_4.png](images/2023-02_4.png) | ![2023-02_5.png](images/2023-02_5.png) | 
+| ![2023-03.png](images/2023-03.png) | ![2023-05.png](images/2023-05.png) | ![2023-05_1.png](images/2023-05_1.png) | 
+| ![2023-05_10.png](images/2023-05_10.png) | ![2023-05_11.png](images/2023-05_11.png) | ![2023-05_12.png](images/2023-05_12.png) | 
+| ![2023-05_13.png](images/2023-05_13.png) | ![2023-05_15.png](images/2023-05_15.png) | ![2023-05_2.png](images/2023-05_2.png) | 
+| ![2023-05_3.png](images/2023-05_3.png) | ![2023-05_4.png](images/2023-05_4.png) | ![2023-05_5.png](images/2023-05_5.png) | 
+| ![2023-05_6.png](images/2023-05_6.png) | ![2023-05_8.png](images/2023-05_8.png) | ![2023-09.png](images/2023-09.png) | 
+| ![2023-09_1.png](images/2023-09_1.png) | ![2023-09_2.png](images/2023-09_2.png) | ![2023-09_3.png](images/2023-09_3.png) | 
+| ![2023-09_5.png](images/2023-09_5.png) | ![2023-09_6.png](images/2023-09_6.png) | ![2023-09_7.png](images/2023-09_7.png) | 
+| ![2023-10.png](images/2023-10.png) | ![2023-12.png](images/2023-12.png) | ![2023-12_0.png](images/2023-12_0.png) | 
+| ![2023-12_1.png](images/2023-12_1.png) | ![2023-12_2.png](images/2023-12_2.png) | ![2023-12_3.png](images/2023-12_3.png) | 
+| ![2023-12_4.png](images/2023-12_4.png) | ![2023-12_5.png](images/2023-12_5.png) | ![2023-12_6.png](images/2023-12_6.png) | 
 </details>
 
 <details>
 <summary>2022</summary>
 
-Number of images: 56
+Number of images: 48
 
-| ![2022-01.jpg](images/2022-01.jpg) | ![2022-01.png](images/2022-01.png) | ![2022-01_1.jpg](images/2022-01_1.jpg) | 
+| ![2022-01.jpg](images/2022-01.jpg) | ![2022-01_1.png](images/2022-01_1.png) | ![2022-01_2.png](images/2022-01_2.png) | 
 |---|---|---|
-| ![2022-01_1.png](images/2022-01_1.png) | ![2022-01_2.jpg](images/2022-01_2.jpg) | ![2022-02.png](images/2022-02.png) | 
-| ![2022-02_1.png](images/2022-02_1.png) | ![2022-02_5.png](images/2022-02_5.png) | ![2022-02_6.png](images/2022-02_6.png) | 
-| ![2022-02_7.png](images/2022-02_7.png) | ![2022-02_8.png](images/2022-02_8.png) | ![2022-02_9.png](images/2022-02_9.png) | 
-| ![2022-04.png](images/2022-04.png) | ![2022-04_1.png](images/2022-04_1.png) | ![2022-05.png](images/2022-05.png) | 
-| ![2022-05_1.png](images/2022-05_1.png) | ![2022-05_2.png](images/2022-05_2.png) | ![2022-05_3.png](images/2022-05_3.png) | 
-| ![2022-05_4.png](images/2022-05_4.png) | ![2022-05_5.png](images/2022-05_5.png) | ![2022-05_6.png](images/2022-05_6.png) | 
-| ![2022-05_7.png](images/2022-05_7.png) | ![2022-07.jpg](images/2022-07.jpg) | ![2022-07.png](images/2022-07.png) | 
-| ![2022-07_1.jpg](images/2022-07_1.jpg) | ![2022-07_1.png](images/2022-07_1.png) | ![2022-07_10.png](images/2022-07_10.png) | 
-| ![2022-07_11.png](images/2022-07_11.png) | ![2022-07_12.png](images/2022-07_12.png) | ![2022-07_13.png](images/2022-07_13.png) | 
-| ![2022-07_14.png](images/2022-07_14.png) | ![2022-07_15.png](images/2022-07_15.png) | ![2022-07_16.png](images/2022-07_16.png) | 
-| ![2022-07_17.png](images/2022-07_17.png) | ![2022-07_18.png](images/2022-07_18.png) | ![2022-07_19.png](images/2022-07_19.png) | 
-| ![2022-07_2.jpg](images/2022-07_2.jpg) | ![2022-07_2.png](images/2022-07_2.png) | ![2022-07_20.png](images/2022-07_20.png) | 
-| ![2022-07_21.png](images/2022-07_21.png) | ![2022-07_22.png](images/2022-07_22.png) | ![2022-07_23.png](images/2022-07_23.png) | 
-| ![2022-07_3.jpg](images/2022-07_3.jpg) | ![2022-07_3.png](images/2022-07_3.png) | ![2022-07_4.jpg](images/2022-07_4.jpg) | 
-| ![2022-07_4.png](images/2022-07_4.png) | ![2022-07_5.png](images/2022-07_5.png) | ![2022-07_6.png](images/2022-07_6.png) | 
-| ![2022-07_7.png](images/2022-07_7.png) | ![2022-07_8.png](images/2022-07_8.png) | ![2022-07_9.png](images/2022-07_9.png) | 
-| ![2022-08.png](images/2022-08.png) | ![2022-09.png](images/2022-09.png) | ![2022-09_1.png](images/2022-09_1.png) | 
-| ![2022-09_2.png](images/2022-09_2.png) | ![2022-09_3.png](images/2022-09_3.png) | 
+| ![2022-02.png](images/2022-02.png) | ![2022-02_1.png](images/2022-02_1.png) | ![2022-02_2.png](images/2022-02_2.png) | 
+| ![2022-02_3.png](images/2022-02_3.png) | ![2022-02_4.png](images/2022-02_4.png) | ![2022-02_5.png](images/2022-02_5.png) | 
+| ![2022-04.png](images/2022-04.png) | ![2022-04_1.png](images/2022-04_1.png) | ![2022-04_2.png](images/2022-04_2.png) | 
+| ![2022-05.png](images/2022-05.png) | ![2022-05_1.png](images/2022-05_1.png) | ![2022-05_2.png](images/2022-05_2.png) | 
+| ![2022-05_3.png](images/2022-05_3.png) | ![2022-05_4.png](images/2022-05_4.png) | ![2022-05_5.png](images/2022-05_5.png) | 
+| ![2022-05_6.png](images/2022-05_6.png) | ![2022-05_7.png](images/2022-05_7.png) | ![2022-07.png](images/2022-07.png) | 
+| ![2022-07_1.png](images/2022-07_1.png) | ![2022-07_10.png](images/2022-07_10.png) | ![2022-07_11.png](images/2022-07_11.png) | 
+| ![2022-07_12.png](images/2022-07_12.png) | ![2022-07_13.png](images/2022-07_13.png) | ![2022-07_14.png](images/2022-07_14.png) | 
+| ![2022-07_15.png](images/2022-07_15.png) | ![2022-07_16.png](images/2022-07_16.png) | ![2022-07_17.png](images/2022-07_17.png) | 
+| ![2022-07_18.png](images/2022-07_18.png) | ![2022-07_19.png](images/2022-07_19.png) | ![2022-07_2.png](images/2022-07_2.png) | 
+| ![2022-07_20.png](images/2022-07_20.png) | ![2022-07_21.png](images/2022-07_21.png) | ![2022-07_22.png](images/2022-07_22.png) | 
+| ![2022-07_23.png](images/2022-07_23.png) | ![2022-07_24.jpg](images/2022-07_24.jpg) | ![2022-07_3.jpg](images/2022-07_3.jpg) | 
+| ![2022-07_4.jpg](images/2022-07_4.jpg) | ![2022-07_5.png](images/2022-07_5.png) | ![2022-07_7.png](images/2022-07_7.png) | 
+| ![2022-07_8.png](images/2022-07_8.png) | ![2022-07_9.png](images/2022-07_9.png) | ![2022-08.png](images/2022-08.png) | 
+| ![2022-09_1.png](images/2022-09_1.png) | ![2022-09_2.png](images/2022-09_2.png) | ![2022-09_3.png](images/2022-09_3.png) | 
 </details>
 
 <details>
 <summary>2021</summary>
 
-Number of images: 85
+Number of images: 79
 
 | ![2021-01.png](images/2021-01.png) | ![2021-01_1.png](images/2021-01_1.png) | ![2021-01_2.png](images/2021-01_2.png) | 
 |---|---|---|
@@ -74,26 +69,24 @@ Number of images: 85
 | ![2021-03_3.png](images/2021-03_3.png) | ![2021-03_4.png](images/2021-03_4.png) | ![2021-03_5.png](images/2021-03_5.png) | 
 | ![2021-04_1.png](images/2021-04_1.png) | ![2021-04_2.png](images/2021-04_2.png) | ![2021-04_3.png](images/2021-04_3.png) | 
 | ![2021-05.png](images/2021-05.png) | ![2021-05_1.png](images/2021-05_1.png) | ![2021-05_2.png](images/2021-05_2.png) | 
-| ![2021-05_3.png](images/2021-05_3.png) | ![2021-05_4.png](images/2021-05_4.png) | ![2021-05_5.png](images/2021-05_5.png) | 
-| ![2021-06.png](images/2021-06.png) | ![2021-07.png](images/2021-07.png) | ![2021-07_1.png](images/2021-07_1.png) | 
-| ![2021-07_2.png](images/2021-07_2.png) | ![2021-07_3.png](images/2021-07_3.png) | ![2021-07_4.png](images/2021-07_4.png) | 
-| ![2021-07_5.png](images/2021-07_5.png) | ![2021-08.png](images/2021-08.png) | ![2021-08_1.png](images/2021-08_1.png) | 
-| ![2021-08_10.png](images/2021-08_10.png) | ![2021-08_11.png](images/2021-08_11.png) | ![2021-08_12.png](images/2021-08_12.png) | 
-| ![2021-08_13.png](images/2021-08_13.png) | ![2021-08_14.png](images/2021-08_14.png) | ![2021-08_15.png](images/2021-08_15.png) | 
-| ![2021-08_16.png](images/2021-08_16.png) | ![2021-08_17.png](images/2021-08_17.png) | ![2021-08_2.png](images/2021-08_2.png) | 
+| ![2021-05_3.png](images/2021-05_3.png) | ![2021-05_4.png](images/2021-05_4.png) | ![2021-06.png](images/2021-06.png) | 
+| ![2021-07.png](images/2021-07.png) | ![2021-07_1.png](images/2021-07_1.png) | ![2021-07_2.png](images/2021-07_2.png) | 
+| ![2021-07_3.png](images/2021-07_3.png) | ![2021-07_4.png](images/2021-07_4.png) | ![2021-07_5.png](images/2021-07_5.png) | 
+| ![2021-08.png](images/2021-08.png) | ![2021-08_1.png](images/2021-08_1.png) | ![2021-08_10.png](images/2021-08_10.png) | 
+| ![2021-08_11.png](images/2021-08_11.png) | ![2021-08_12.png](images/2021-08_12.png) | ![2021-08_13.png](images/2021-08_13.png) | 
+| ![2021-08_14.png](images/2021-08_14.png) | ![2021-08_15.png](images/2021-08_15.png) | ![2021-08_2.png](images/2021-08_2.png) | 
 | ![2021-08_3.png](images/2021-08_3.png) | ![2021-08_4.png](images/2021-08_4.png) | ![2021-08_5.png](images/2021-08_5.png) | 
 | ![2021-08_6.png](images/2021-08_6.png) | ![2021-08_7.png](images/2021-08_7.png) | ![2021-08_8.png](images/2021-08_8.png) | 
 | ![2021-08_9.png](images/2021-08_9.png) | ![2021-09.jpg](images/2021-09.jpg) | ![2021-09.png](images/2021-09.png) | 
 | ![2021-09_1.jpg](images/2021-09_1.jpg) | ![2021-09_1.png](images/2021-09_1.png) | ![2021-09_10.png](images/2021-09_10.png) | 
 | ![2021-09_11.png](images/2021-09_11.png) | ![2021-09_12.png](images/2021-09_12.png) | ![2021-09_13.png](images/2021-09_13.png) | 
 | ![2021-09_14.png](images/2021-09_14.png) | ![2021-09_15.png](images/2021-09_15.png) | ![2021-09_16.png](images/2021-09_16.png) | 
-| ![2021-09_17.png](images/2021-09_17.png) | ![2021-09_18.png](images/2021-09_18.png) | ![2021-09_19.png](images/2021-09_19.png) | 
-| ![2021-09_2.png](images/2021-09_2.png) | ![2021-09_20.png](images/2021-09_20.png) | ![2021-09_21.png](images/2021-09_21.png) | 
-| ![2021-09_22.png](images/2021-09_22.png) | ![2021-09_23.png](images/2021-09_23.png) | ![2021-09_24.png](images/2021-09_24.png) | 
-| ![2021-09_25.png](images/2021-09_25.png) | ![2021-09_26.png](images/2021-09_26.png) | ![2021-09_27.png](images/2021-09_27.png) | 
-| ![2021-09_28.png](images/2021-09_28.png) | ![2021-09_29.png](images/2021-09_29.png) | ![2021-09_3.png](images/2021-09_3.png) | 
-| ![2021-09_30.png](images/2021-09_30.png) | ![2021-09_4.png](images/2021-09_4.png) | ![2021-09_5.png](images/2021-09_5.png) | 
-| ![2021-09_6.png](images/2021-09_6.png) | ![2021-09_7.png](images/2021-09_7.png) | ![2021-09_8.png](images/2021-09_8.png) | 
+| ![2021-09_17.png](images/2021-09_17.png) | ![2021-09_19.png](images/2021-09_19.png) | ![2021-09_2.png](images/2021-09_2.png) | 
+| ![2021-09_20.png](images/2021-09_20.png) | ![2021-09_21.png](images/2021-09_21.png) | ![2021-09_22.png](images/2021-09_22.png) | 
+| ![2021-09_23.png](images/2021-09_23.png) | ![2021-09_24.png](images/2021-09_24.png) | ![2021-09_25.png](images/2021-09_25.png) | 
+| ![2021-09_26.png](images/2021-09_26.png) | ![2021-09_28.png](images/2021-09_28.png) | ![2021-09_29.png](images/2021-09_29.png) | 
+| ![2021-09_3.png](images/2021-09_3.png) | ![2021-09_30.png](images/2021-09_30.png) | ![2021-09_4.png](images/2021-09_4.png) | 
+| ![2021-09_5.png](images/2021-09_5.png) | ![2021-09_6.png](images/2021-09_6.png) | ![2021-09_8.png](images/2021-09_8.png) | 
 | ![2021-09_9.png](images/2021-09_9.png) | ![2021-10.png](images/2021-10.png) | ![2021-11.png](images/2021-11.png) | 
 | ![2021-11_1.png](images/2021-11_1.png) | ![2021-11_2.png](images/2021-11_2.png) | ![2021-11_3.png](images/2021-11_3.png) | 
 | ![2021-12.png](images/2021-12.png) | 
@@ -102,13 +95,12 @@ Number of images: 85
 <details>
 <summary>2020</summary>
 
-Number of images: 10
+Number of images: 9
 
 | ![2020-01.png](images/2020-01.png) | ![2020-11.png](images/2020-11.png) | ![2020-12.png](images/2020-12.png) | 
 |---|---|---|
 | ![2020-12_1.png](images/2020-12_1.png) | ![2020-12_2.png](images/2020-12_2.png) | ![2020-12_3.png](images/2020-12_3.png) | 
 | ![2020-12_4.png](images/2020-12_4.png) | ![2020-12_5.png](images/2020-12_5.png) | ![2020-12_6.png](images/2020-12_6.png) | 
-| ![2020-12_7.png](images/2020-12_7.png) | 
 </details>
 
 <!-- END IMAGES -->
@@ -144,7 +136,7 @@ This is my recommeded installation for Windows
 3. Under the `Backgrounds` section, select `<location>/IrisBackgrounds/images`.
 4. For a single monitor, set the mode to `centre`. For multiple, use `centre` for multiple images or `span` for a single across all screens. These settings appear to give the best results, though feel free to try other modes.
 5. Set the refresh time to anything. I personally use `1 minute`.
-6. Enjoy exactly <!-- BEGIN COUNT -->`210`<!-- END COUNT --> (and counting) screenshots every time you see your desktop!
+6. Enjoy exactly <!-- BEGIN COUNT -->`190`<!-- END COUNT --> (and counting) screenshots every time you see your desktop!
 
 ## Uploading
 To contribute screenshots to this collection, each image must be
