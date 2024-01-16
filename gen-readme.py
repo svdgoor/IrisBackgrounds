@@ -25,11 +25,21 @@ class ReadmeGenerator:
         self.trigger_images_exit = "<!-- END IMAGES -->\n"
         self.trigger_count_enter = "<!-- BEGIN COUNT -->`"
         self.trigger_count_exit = "`<!-- END COUNT -->"
+        self.image_filter = lambda image: image.endswith(".png") or image.endswith(".jpg") and not image.startswith("_ignore")
         self.table_columns = 3
 
     def generate_readme(self):
         """
         Generate the README file by reading the existing README, filtering and grouping images, and updating the file.
+
+        This method performs the following steps:
+        1. Checks if the README file exists. If not, raises a FileNotFoundError.
+        2. Reads the content of the existing README file.
+        3. Checks if the trigger section is present in the README file. If not, raises a ValueError.
+        4. Retrieves the indices of the trigger section and the count section in the README file.
+        5. Filters the images based on certain criteria.
+        6. Groups the filtered images by year.
+        7. Generates the updated output for the README file by replacing the trigger section, count section, and adding the grouped images.
 
         Raises:
             FileNotFoundError: If the README file is not found.
@@ -119,8 +129,7 @@ class ReadmeGenerator:
         Note:
             The filtering criteria are images with extensions .png or .jpg and not starting with "_ignore".
         """
-        images = [image for image in os.listdir(self.images_path) if
-                  (image.endswith(".png") or image.endswith(".jpg")) and not image.startswith("_ignore")]
+        images = [image for image in os.listdir(self.images_path) if self.image_filter(image)]
         return images
 
     def group_images_by_year(self, images) -> 'dict[str, list[str]]':
