@@ -87,6 +87,9 @@ out = ""
 for line in readme_lines[:trigger_enter_index + 1]:
     out += line
 
+# Write the table header
+out += "| Preview | Year | Images |\n"
+out += "|---|:---:|:---:|\n"
 # Write the images with markdown in a table format of 3 columns
 for year in images_by_year.__reversed__():
 
@@ -124,10 +127,10 @@ for year in images_by_year.__reversed__():
     first_image = images_by_year[year][0]
 
     # Write the clickable image
-    out += f"[![{first_image}]({IMAGES_PATH}/{first_image})](./{file_name})"
+    out += f"| [![{first_image}]({IMAGES_PATH}/{first_image})](./{file_name}) | "
 
     # Write the centered subtext with the year
-    out += f"<p align='center'><a href='./{file_name}'>{year} ({len(images_by_year[year])})</a></p>"
+    out += f"<a href='./{file_name}'>{year}</a> | {len(images_by_year[year])} |\n"
 
 # Write the lines after and including the exit trigger
 for line in readme_lines[trigger_exit_index:count_index]:

@@ -1,7 +1,15 @@
 <!-- BEGIN IMAGES -->
-[![2024-01.png](images/2024-01.png)](./images_2024.md)<p align='center'><a href='./images_2024.md'>2024 (15)</a></p>[![2023-01.png](images/2023-01.png)](./images_2023.md)<p align='center'><a href='./images_2023.md'>2023 (39)</a></p>[![2022-01.jpg](images/2022-01.jpg)](./images_2022.md)<p align='center'><a href='./images_2022.md'>2022 (48)</a></p>[![2021-01.png](images/2021-01.png)](./images_2021.md)<p align='center'><a href='./images_2021.md'>2021 (79)</a></p>[![2020-01.png](images/2020-01.png)](./images_2020.md)<p align='center'><a href='./images_2020.md'>2020 (9)</a></p><!-- END IMAGES -->
+| Preview | Year | Images |
+|---|:---:|:---:|
+| [![2024-01.png](images/2024-01.png)](./images_2024.md) | <a href='./images_2024.md'>2024</a> | 15 |
+| [![2023-01.png](images/2023-01.png)](./images_2023.md) | <a href='./images_2023.md'>2023</a> | 39 |
+| [![2022-01.jpg](images/2022-01.jpg)](./images_2022.md) | <a href='./images_2022.md'>2022</a> | 48 |
+| [![2021-01.png](images/2021-01.png)](./images_2021.md) | <a href='./images_2021.md'>2021</a> | 79 |
+| [![2020-01.png](images/2020-01.png)](./images_2020.md) | <a href='./images_2020.md'>2020</a> | 9 |
+<!-- END IMAGES -->
 
 ## Credits
+
 ##### Primary Contributors
 - [RaydenKoning](https://github.com/RaydenKonig/)
 - [NextdoorPsycho](https://github.com/nextdoorpsycho)
@@ -23,15 +31,15 @@
 - Grocer\*
 
 \* *from [Discord](discord.gg/volmit)*
-
 Thanks to all who made screenshots of Iris Creations!
-
 ## Installation
+
 This is my recommeded installation for Windows
+
 1. Clone this repository to any `<location>` on your PC (HDD if present).
 2. Right-click your desktop and select `personalize`.
 3. Under the `Backgrounds` section, select `<location>/IrisBackgrounds/images`.
-4. For a single monitor, set the mode to `centre`. For multiple, use `centre` for multiple images or `span` for a single across all screens. These settings appear to give the best results, though feel free to try other modes.
+4. For a single monitor, set the mode to `centre` or `fill`. For multiple, use `centre` or `fill` for multiple images or `span` for a single across all screens. These settings appear to give the best results, though feel free to try other modes.
 5. Set the refresh time to anything. I personally use `1 minute`.
 6. Enjoy exactly <!-- BEGIN COUNT -->`190`<!-- END COUNT --> (and counting) screenshots every time you see your desktop!
 
