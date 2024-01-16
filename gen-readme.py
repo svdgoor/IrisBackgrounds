@@ -1,150 +1,232 @@
-# This script generates a readme file for the project.
-# It adapts the readme without changing the text in there.
-# This includes a reference to each image in the repository in the readme.
-# This reads the readme and searches for 'TRIGGER'
-# Then it writes previews of the images in the repository right after that.
-
 import os
+import datetime
 
-# Path to the readme file
-README_PATH = "README.md"
+class ReadmeGenerator:
+    def __init__(self, readme_path, images_path):
+        """
+        Initialize the GenReadme object.
 
-# Images path
-IMAGES_PATH = "images"
+        Args:
+            readme_path (str): The path to the README file.
+            images_path (str): The path to the directory containing the images.
 
-# Trigger
-TRIGGER_IMAGES_ENTER = "<!-- BEGIN IMAGES -->\n"
-TRIGGER_IMAGES_EXIT = "<!-- END IMAGES -->\n"
-TRIGGER_COUNT_ENTER = "<!-- BEGIN COUNT -->`"
-TRIGGER_COUNT_EXIT = "`<!-- END COUNT -->"
+        Attributes:
+            readme_path (str): The path to the README file.
+            images_path (str): The path to the directory containing the images.
+            trigger_images_enter (str): The trigger for the beginning of the images section in the README file.
+            trigger_images_exit (str): The trigger for the end of the images section in the README file.
+            trigger_count_enter (str): The trigger for the beginning of the count section in the README file.
+            trigger_count_exit (str): The trigger for the end of the count section in the README file.
+            table_columns (int): The number of columns in the images table.
+        """
+        self.readme_path = readme_path
+        self.images_path = images_path
+        self.trigger_images_enter = "<!-- BEGIN IMAGES -->\n"
+        self.trigger_images_exit = "<!-- END IMAGES -->\n"
+        self.trigger_count_enter = "<!-- BEGIN COUNT -->`"
+        self.trigger_count_exit = "`<!-- END COUNT -->"
+        self.table_columns = 3
 
-# Table dimensions
-TABLE_COLUMNS = 3
+    def generate_readme(self):
+        """
+        Generate the README file by reading the existing README, filtering and grouping images, and updating the file.
 
-# Set cwd to the directory of this script
-os.chdir(os.path.dirname(os.path.realpath(__file__)))
+        Raises:
+            FileNotFoundError: If the README file is not found.
+            ValueError: If the trigger or count section is not found in the README file.
+        """
+        if not os.path.exists(self.readme_path):
+            raise FileNotFoundError("README.md not found")
 
-# Check if the readme exists
-if not os.path.exists(README_PATH):
-    print("README.md not found")
-    exit(1)
+        readme_lines = self.read_readme()
 
-# Read the readme
-readme_lines = None
-with open(README_PATH, "r") as f:
-    readme_lines = f.readlines()
+        if not self.is_trigger_present(readme_lines):
+            raise ValueError("Trigger not found")
 
-# Check if the trigger is in the readme
-if TRIGGER_IMAGES_ENTER not in readme_lines:
-    print("Trigger enter not found")
-    exit(1)
-if TRIGGER_IMAGES_EXIT not in readme_lines:
-    print("Trigger exit not found")
-    exit(1)
-count_index = -1
-for i, line in enumerate(readme_lines):
-    if TRIGGER_COUNT_ENTER in line and TRIGGER_COUNT_EXIT in line:
-        count_index = i
-if count_index == -1:
-    print("Count trigger not found")
-    exit(1)
+        trigger_enter_index, trigger_exit_index = self.get_trigger_indices(readme_lines)
+        count_index = self.get_count_trigger_index(readme_lines)
 
-# Get the index of the trigger
-trigger_enter_index = readme_lines.index(TRIGGER_IMAGES_ENTER)
-trigger_exit_index = readme_lines.index(TRIGGER_IMAGES_EXIT)
+        images = self.get_filtered_images()
 
-# Filter out non-images from the repository
-images: 'list[str]' = [image for image in os.listdir(IMAGES_PATH) if image.endswith(".png") or image.endswith(".jpg") and not image.startswith("_ignore")]
+        images_by_year = self.group_images_by_year(images)
 
-# Group the images by year
-images_by_year: 'dict' = {}
-for image in images:
-    split = image.split("-")
-    if len(split) < 2:
-        # Get the creation year and month from the file metadata
-        import datetime
-        creation_time = os.path.getctime(f"{IMAGES_PATH}/{image}")
-        creation_date = datetime.datetime.fromtimestamp(creation_time)
+        self.generate_output(readme_lines, trigger_enter_index, trigger_exit_index, count_index, images_by_year, images)
 
-        # Rename the file to the format YYYY-MM_ID.png|jpg where _ID is omitted if it is 0
-        # Format month to 2 digits
+    def read_readme(self) -> 'list[str]':
+        """
+        Read the existing README file and return its content as a list of lines.
+
+        Returns:
+            list: The content of the README file as a list of lines.
+        """
+        with open(self.readme_path, "r") as f:
+            return f.readlines()
+
+    def is_trigger_present(self, readme_lines) -> bool:
+        """
+        Check if the trigger section is present in the README file.
+
+        Args:
+            readme_lines (list): The content of the README file as a list of lines.
+
+        Returns:
+            bool: True if the trigger section is present, False otherwise.
+        """
+        return self.trigger_images_enter in readme_lines and self.trigger_images_exit in readme_lines
+
+    def get_trigger_indices(self, readme_lines) -> 'tuple[int, int]':
+        """
+        Get the indices of the trigger section in the README file.
+
+        Args:
+            readme_lines (list): The content of the README file as a list of lines.
+
+        Returns:
+            tuple: A tuple containing the indices of the trigger section in the README file.
+        """
+        trigger_enter_index = readme_lines.index(self.trigger_images_enter)
+        trigger_exit_index = readme_lines.index(self.trigger_images_exit)
+        return trigger_enter_index, trigger_exit_index
+
+    def get_count_trigger_index(self, readme_lines) -> int:
+        """
+        Get the index of the count trigger in the README file.
+
+        Args:
+            readme_lines (list): The content of the README file as a list of lines.
+
+        Returns:
+            int: The index of the count trigger in the README file.
+
+        Raises:
+            ValueError: If the count trigger is not found.
+        """
+        count_index = -1
+        for i, line in enumerate(readme_lines):
+            if self.trigger_count_enter in line and self.trigger_count_exit in line:
+                count_index = i
+        if count_index == -1:
+            raise ValueError("Count trigger not found")
+        return count_index
+
+    def get_filtered_images(self) -> 'list[str]':
+        """
+        Get a list of filtered images from the images directory.
+
+        Returns:
+            list: A list of filtered images.
+
+        Note:
+            The filtering criteria are images with extensions .png or .jpg and not starting with "_ignore".
+        """
+        images = [image for image in os.listdir(self.images_path) if
+                  (image.endswith(".png") or image.endswith(".jpg")) and not image.startswith("_ignore")]
+        return images
+
+    def group_images_by_year(self, images) -> 'dict[str, list[str]]':
+        """
+        Group the images by year.
+
+        Args:
+            images (list): A list of images.
+
+        Returns:
+            dict: A dictionary where the keys are years and the values are lists of images.
+
+        Note:
+            The year is determined by the first part of the image name before the "-" character.
+            If the image name does not contain a "-", the creation date of the image file is used.
+        """
+        images_by_year = {}
+        for image in images:
+            split = image.split("-")
+            if len(split) < 2:
+                creation_time = os.path.getctime(f"{self.images_path}/{image}")
+                creation_date = datetime.datetime.fromtimestamp(creation_time)
+                new_name = self.generate_new_name(image, creation_date)
+                os.rename(f"{self.images_path}/{image}", f"{self.images_path}/{new_name}{os.path.splitext(image)[1]}")
+                split = new_name.split("-")
+            year = split[0]
+            if year not in images_by_year:
+                images_by_year[year] = []
+            images_by_year[year].append(image)
+        return images_by_year
+
+    def generate_new_name(self, image, creation_date) -> str:
+        """
+        Generate a new name for the image based on its creation date.
+
+        Args:
+            image (str): The name of the image.
+            creation_date (datetime.datetime): The creation date of the image.
+
+        Returns:
+            str: The new name for the image.
+
+        Note:
+            If a file with the same name already exists, a suffix "_0" is added to the new name.
+            If multiple files with the same name exist, the suffix is incremented until a unique name is found.
+        """
         new_name = f"{creation_date.year}-{creation_date.month:02}"
-        if os.path.exists(f"{IMAGES_PATH}/{new_name}.png") or os.path.exists(f"{IMAGES_PATH}/{new_name}.jpg"):
+        if os.path.exists(f"{self.images_path}/{new_name}.png") or os.path.exists(f"{self.images_path}/{new_name}.jpg"):
             new_name = new_name + "_0"
-            while os.path.exists(f"{IMAGES_PATH}/{new_name}.png") or os.path.exists(f"{IMAGES_PATH}/{new_name}.jpg"):
+            while os.path.exists(f"{self.images_path}/{new_name}.png") or os.path.exists(f"{self.images_path}/{new_name}.jpg"):
                 new_name = new_name[:-1] + str(int(new_name[-1]) + 1)
         print(f"Renaming {image} to {new_name}{os.path.splitext(image)[1]}")
-        os.rename(f"{IMAGES_PATH}/{image}", f"{IMAGES_PATH}/{new_name}{os.path.splitext(image)[1]}")
-        split = new_name.split("-")
-    year = split[0]
-    if year not in images_by_year:
-        images_by_year[year] = []
-    images_by_year[year].append(image)
+        return new_name
 
-# Write the readme
-out = ""
-# Write the lines before and including the enter trigger
-for line in readme_lines[:trigger_enter_index + 1]:
-    out += line
+    def generate_output(self, readme_lines, trigger_enter_index, trigger_exit_index, count_index, images_by_year, images) -> None:
+        """
+        Generate the output for the README file.
 
-# Write the table header
-out += "| Preview | Year | Images |\n"
-out += "|---|:---:|:---:|\n"
-# Write the images with markdown in a table format of 3 columns
-for year in images_by_year.__reversed__():
+        Args:
+            readme_lines (list): The content of the README file as a list of lines.
+            trigger_enter_index (int): The index of the trigger enter in the README file.
+            trigger_exit_index (int): The index of the trigger exit in the README file.
+            count_index (int): The index of the count trigger in the README file.
+            images_by_year (dict): A dictionary where the keys are years and the values are lists of images.
+            images (list): A list of images.
+        """
+        with open(self.readme_path, "w") as f:
+            for line in readme_lines[:trigger_enter_index + 1]:
+                f.write(line)
 
-    # Get images for the year
-    ims = images_by_year[year]
+            f.write("| Preview | Year | Images |\n")
+            f.write("|---|:---:|:---:|\n")
 
-    # Generate the file name
-    file_name = f"images_{year}.md"
+            for year in reversed(images_by_year):
+                ims = images_by_year[year]
+                file_name = f"images_{year}.md"
+                with open(file_name, "w") as f_year:
+                    f_year.write(f"# {year}\n\n")
+                    f_year.write("| ")
+                    for j in range(self.table_columns):
+                        if j < len(images_by_year[year]):
+                            f_year.write(f"![{images_by_year[year][j]}]({self.images_path}/{images_by_year[year][j]}) | ")
+                    f_year.write("\n")
+                    f_year.write("|---|---|---|\n")
+                    for i in range(self.table_columns, len(images_by_year[year]), self.table_columns):
+                        f_year.write("| ")
+                        for j in range(self.table_columns):
+                            if i + j < len(images_by_year[year]):
+                                f_year.write(f"![{images_by_year[year][i + j]}]({self.images_path}/{images_by_year[year][i + j]}) | ")
+                        f_year.write("\n")
 
-    # Open the file in write mode
-    with open(file_name, "w") as f:
-        # Write the title and number of images
-        f.write(f"# {year}\n\n")
+                first_image = images_by_year[year][0]
+                f.write(f"| [![{first_image}]({self.images_path}/{first_image})](./{file_name}) | ")
+                f.write(f"<a href='./{file_name}'>{year}</a> | {len(images_by_year[year])} |\n")
 
-        # Write the table header
-        f.write("| ")
-        for j in range(TABLE_COLUMNS):
-            if j < len(images_by_year[year]):
-                f.write(f"![{images_by_year[year][j]}]({IMAGES_PATH}/{images_by_year[year][j]}) | ")
-        f.write("\n")
+            for line in readme_lines[trigger_exit_index:count_index]:
+                f.write(line)
 
-        # Write the table divider
-        f.write("|---|---|---|\n")
+            count_line = readme_lines[count_index]
+            splitup_s = count_line.split(self.trigger_count_enter)
+            splitup_e = splitup_s[1].split(self.trigger_count_exit)
+            f.write(splitup_s[0] + self.trigger_count_enter + str(len(images)) + self.trigger_count_exit + splitup_e[1])
 
-        # Write the table rows
-        for i in range(TABLE_COLUMNS, len(images_by_year[year]), TABLE_COLUMNS):
-            f.write("| ")
-            for j in range(TABLE_COLUMNS):
-                if i + j < len(images_by_year[year]):
-                    f.write(f"![{images_by_year[year][i + j]}]({IMAGES_PATH}/{images_by_year[year][i + j]}) | ")
-            f.write("\n")
+            for line in readme_lines[count_index + 1:]:
+                f.write(line)
 
-    # Add a link to the new markdown file in the main document
-    # Get the first image for the year
-    first_image = images_by_year[year][0]
-
-    # Write the clickable image
-    out += f"| [![{first_image}]({IMAGES_PATH}/{first_image})](./{file_name}) | "
-
-    # Write the centered subtext with the year
-    out += f"<a href='./{file_name}'>{year}</a> | {len(images_by_year[year])} |\n"
-
-# Write the lines after and including the exit trigger
-for line in readme_lines[trigger_exit_index:count_index]:
-    out += line
-
-# Write the image count
-count_line = readme_lines[count_index]
-splitup_s = count_line.split(TRIGGER_COUNT_ENTER)
-splitup_e = splitup_s[1].split(TRIGGER_COUNT_EXIT)
-out += splitup_s[0] + TRIGGER_COUNT_ENTER + str(len(images)) + TRIGGER_COUNT_EXIT + splitup_e[1]
-
-# Write remaining lines
-for line in readme_lines[count_index + 1:]:
-    out += line
-
-with open(README_PATH, "w") as f:
-    f.write(out)
+# Usage
+generator = ReadmeGenerator("README.md", "images")
+generator.generate_readme()
