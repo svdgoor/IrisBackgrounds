@@ -1,7 +1,7 @@
 <!-- BEGIN IMAGES -->
 | Preview | Year | Images |
 |---|:---:|:---:|
-| [![2024-01.png](images/2024-01.png)](./images_2024.md) | <a href='./images_2024.md'>2024</a> | 45 |
+| [![2024-01.png](images/2024-01.png)](./images_2024.md) | <a href='./images_2024.md'>2024</a> | 49 |
 | [![2023-01.png](images/2023-01.png)](./images_2023.md) | <a href='./images_2023.md'>2023</a> | 39 |
 | [![2022-01.jpg](images/2022-01.jpg)](./images_2022.md) | <a href='./images_2022.md'>2022</a> | 48 |
 | [![2021-01.png](images/2021-01.png)](./images_2021.md) | <a href='./images_2021.md'>2021</a> | 79 |
@@ -41,7 +41,7 @@ This is my recommeded installation for Windows
 3. Under the `Backgrounds` section, select `<location>/IrisBackgrounds/images`.
 4. For a single monitor, set the mode to `centre` or `fill`. For multiple, use `centre` or `fill` for multiple images or `span` for a single across all screens. These settings appear to give the best results, though feel free to try other modes.
 5. Set the refresh time to anything. I personally use `1 minute`.
-6. Enjoy exactly <!-- BEGIN COUNT -->`220`<!-- END COUNT --> (and counting) screenshots every time you see your desktop!
+6. Enjoy exactly <!-- BEGIN COUNT -->`224`<!-- END COUNT --> (and counting) screenshots every time you see your desktop!
 
 ## Uploading
 To contribute screenshots to this collection, each image must be
